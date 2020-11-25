@@ -14,8 +14,9 @@ repositories {
     mavenCentral() //Where to look for jars
 }
 
+apply plugin : 'eclipse'
+
 dependencies {
-	implementation 'de.westnordost:osmapi-map:1.3'
 	implementation 'commons-io:commons-io:2.4'
 	implementation 'com.google.maps:google-maps-services:0.15.0'
     implementation 'org.slf4j:slf4j-simple:1.7.25'
