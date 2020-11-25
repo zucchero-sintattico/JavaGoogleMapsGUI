@@ -25,6 +25,8 @@ import com.google.maps.model.EncodedPolyline;
 import com.google.maps.model.LatLng;
 import com.google.maps.model.PlacesSearchResult;
 
+import java.util.Random;
+
 public class DrawLocationsPanel extends JPanel {
 
     /**
@@ -176,10 +178,15 @@ public class DrawLocationsPanel extends JPanel {
                     actualLocationPositionRelativeToScreen.y
                     );
             
+            Random rand = new Random();
+            float R = rand.nextFloat();
+            float G = rand.nextFloat();
+            float B = rand.nextFloat();
+            
             if(res.getSize() == Place.HOVER_SIZE) {
                 g2d.setColor(DEFAULT_PATH_HOVER_COLOR);
             }else {
-                g2d.setColor(DEFAULT_LINE_COLOR);
+                g2d.setColor(new Color(R, G, B));
             }
             
             /*
